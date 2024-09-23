@@ -36,7 +36,6 @@
         const handleonChange= (e)=>{
           setText(e.target.value)
         }
-
         // Copy Text
         const handleCopy = () => {
           console.log("I am copy");
@@ -44,6 +43,13 @@
           text.select();
           navigator.clipboard.writeText(text.value);
         }
+        // Remove Extra spaces
+        const handleExtraSpaces = () => {
+          console.log("I am Extra Spaces");
+          let newText = Text.split(/[ ]+/);
+          setText(newText.join(" "));
+        }
+
 
           // Dark MOde
         const [myStyle, setMyStyle] = useState({
@@ -139,7 +145,10 @@
                               {/* button for  Clear Text */}
                           <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleClearclick}>Clear Text</button>  
                             {/* button for  Copy Text */}
-                          <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleCopy}>Copy Text</button>  
+                          <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleCopy}>Copy Text</button> 
+                            {/* button for  Remove Extra Spaces */}
+                          <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleExtraSpaces}>Extra Space Remove</button> 
+
                           {/* Your Text Summary */}
                           <div className="mx-5  ">
                             <h2 className="text-1xl font-bold ">Your Text Summary</h2>
