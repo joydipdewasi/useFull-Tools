@@ -15,11 +15,19 @@ const Layout = () => {
       // Text uppercase useState
 
   const[Text, setText] = useState("");
+    // covert Uppercase
   const handleUpclick = () => {
     console.log("Uppercase was clicked");
     let newText = Text.toUpperCase();
     setText(newText);
   }
+    // covert Lowercase
+  const handleLoclick = () => {
+    console.log("Lowercase was clicked");
+    let newText = Text.toLowerCase();
+    setText(newText);
+  }
+
   const handleonChange= (e)=>{
     setText(e.target.value)
   }
@@ -66,13 +74,13 @@ const Layout = () => {
          
          {/* HOME DIV */}
            <div id="home" className="h-screen bg-white shadow-md mb-6 p-4 ">
-            <div className= "mx-12 my-10 ">
+            <div className= "mx-12 my-8 ">
               <h1 className="text-3xl font-bold mb-2">Home div</h1>
               <p>This is the Home div content.</p>
              </div>
               {/* text written div */}
-              <div className="min-h-80 flex items-center justify-center bg-gray-100 p-4">
-                       <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-full max-h-96 overflow-y-auto">
+              <div className="min-h-50 flex items-center justify-center bg-gray-100 p-4">
+                       <div className="bg-white p-2.5 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-full  overflow-y-auto">
                            <textarea 
                                  className="w-full p-4 bg-gray-100 rounded-lg mt-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
                                 placeholder="Write something here..."
@@ -80,8 +88,16 @@ const Layout = () => {
                                </textarea>
                            </div>      
                      </div>
-                     {/* button */}
-                     <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-5 my-2'onClick={handleUpclick}>Convert to Uppercase</button>      
+                     {/* button for  Uppercase */}
+                     <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-4 my-2'onClick={handleUpclick}>Convert to Uppercase</button> 
+                       {/* button for  Lowercase */}
+                     <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-4 my-2'onClick={handleLoclick}>Convert to Lowercase</button>   
+                     {/* Your Text Summary */}
+                     <div className="mx-5  ">
+                      <h2 className="text-1xl font-bold ">Your Text Summary</h2>
+                      <p className=''>{Text.split(" ").length} words and {Text.length} characters</p> 
+                      <p>{0.009*Text.split(" ").length}Minutes read</p> 
+                      </div>  
           </div>
 
 
