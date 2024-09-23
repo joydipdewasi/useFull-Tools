@@ -37,6 +37,14 @@
           setText(e.target.value)
         }
 
+        // Copy Text
+        const handleCopy = () => {
+          console.log("I am copy");
+          var text = document.getElementById("myBox");
+          text.select();
+          navigator.clipboard.writeText(text.value);
+        }
+
           // Dark MOde
         const [myStyle, setMyStyle] = useState({
           color:'white',
@@ -48,6 +56,7 @@
             setMyStyle({
               color:'black',
               backgroundColor:'white',
+              
             })
             setBtnText("Dark Mode")
           }
@@ -55,6 +64,7 @@
             setMyStyle({
               color:'white',
               backgroundColor:'black',
+             
             })
             setBtnText("Light Mode");
           }
@@ -115,7 +125,7 @@
                     {/* text written div */}
                     <div  style={myStyle} className="min-h-50 flex items-center justify-center bg-gray-100 p-4">
                             <div className="bg-white p-2.5 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-full  overflow-y-auto">
-                                <textarea style={myStyle}
+                                <textarea id="myBox" style={myStyle}
                                       className="w-full p-4 bg-gray-100 rounded-lg mt-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
                                       placeholder="Write something here..."
                                       rows="4" value={Text} onChange={handleonChange}>
@@ -128,6 +138,8 @@
                           <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleLoclick}>Lowercase</button>  
                               {/* button for  Clear Text */}
                           <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleClearclick}>Clear Text</button>  
+                            {/* button for  Copy Text */}
+                          <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2'onClick={handleCopy}>Copy Text</button>  
                           {/* Your Text Summary */}
                           <div className="mx-5  ">
                             <h2 className="text-1xl font-bold ">Your Text Summary</h2>
