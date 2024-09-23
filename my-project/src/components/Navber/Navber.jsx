@@ -14,7 +14,7 @@ const Layout = () => {
 
       // Text uppercase useState
 
-  const[Text, setText] = useState("dhjbdfhbj");
+  const[Text, setText] = useState("");
   const handleUpclick = () => {
     console.log("Uppercase was clicked");
     let newText = Text.toUpperCase();
@@ -83,6 +83,9 @@ const Layout = () => {
                      {/* button */}
                      <button className='border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-5 my-2'onClick={handleUpclick}>Convert to Uppercase</button>      
           </div>
+
+
+
 
           {/* ABOUT DIV */}
          <div  id="about" className="h-screen bg-white shadow-md mb-6 p-4">
