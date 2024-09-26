@@ -53,23 +53,23 @@
 
             // Dark MOde
           const [myStyle, setMyStyle] = useState({
-            color:'white',
-            backgroundColor:'black',
+            color:'black',
+            backgroundColor:'white',
           })
           const [btnText, setBtnText] = useState("Dark Mode")
           const  tougleStyle = () => {
-            if(myStyle.color === 'white'){
+            if(myStyle.color === 'black'){
               setMyStyle({
-                color:'black',
-                backgroundColor:'white',
+                color:'white',
+                backgroundColor:'black',
                 
               })
               setBtnText("Dark Mode")
             }
             else{
               setMyStyle({
-                color:'white',
-                backgroundColor:'black',
+                color:'black',
+                backgroundColor:'white',
               
               })
               setBtnText("Light Mode");
@@ -88,10 +88,10 @@
                 <h2 className="text-2xl font-bold mt-6 mb-12">Menu</h2>
                 <ul className="space-y-6">
                   <li>
-                    <a href="#home" className="hover:text-gray-400">Home</a>
+                    <a href="#home" className="hover:text-gray-400">Text Editor</a>
                   </li>
                   <li>
-                    <a href="#about" className="hover:text-gray-400">About</a>
+                    <a href="#about" className="hover:text-gray-400">To do list</a>
                   </li>
                   <li>
                     <a href="#services" className="hover:text-gray-400">Services</a>
@@ -125,8 +125,8 @@
                 {/* HOME DIV */}
                   <div id="home" style={myStyle} className ="h-screen bg-white shadow-md mb-6 p-4 ">
                     <div className = "mx-12 my-9 ">
-                      <h1 className="text-3xl font-bold mb-2">Home div</h1>
-                      <p>This is the Home div content.</p>
+                      <h1 className="text-3xl font-bold mb-2">Text Editor</h1>
+                      <p>This is the Text Editor content.</p>
                     </div>
                       {/* text written div */}
                       <div  style={myStyle} className="min-h-50 flex items-center justify-center bg-gray-100 p-4">
@@ -161,28 +161,28 @@
 
 
                   {/* ABOUT DIV */}
-                <div  id="about" className="h-screen bg-white shadow-md mb-6 p-4">
+                {/* <div  id="about" className="h-screen bg-white shadow-md mb-6 p-4">
                     <div className='mx-12 my-12 '>
                       <h1 className="text-3xl font-bold mb-2">About div</h1>
                       <p>This is the About div content.</p>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* services Dev  */}
-                  <div id="services" className="h-screen bg-white shadow-md mb-6 p-4">
+                  {/* <div id="services" className="h-screen bg-white shadow-md mb-6 p-4">
                       <div className=' mx-12 my-12' >
                       <h1 className="text-3xl font-bold mb-2">Services div</h1>
                       <p>This is the Services div content.</p>
                     </div>               
-                  </div>
+                  </div> */}
 
                   {/* contact div */}
-                  <div id="contact" className="h-screen bg-white shadow-md p-4">
+                  {/* <div id="contact" className="h-screen bg-white shadow-md p-4">
                     <div className=' mx-12 my-12' >
                       <h1 className="text-3xl font-bold mb-2">Contact div</h1>
                       <p>This is the Contact div content.</p>
                       </div> 
-                  </div>
+                  </div> */}
 
                 </div>
               </div>
